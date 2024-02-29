@@ -1,8 +1,29 @@
 "use client"; // This is a client component 👈🏽
 
 import { useState } from 'react';
-import fbFriends from '../data/facebook-friends.json';
-
+// import fbFriends from '../data/facebook-friends.json';
+const fbFriends = {"friends_v2": [
+  {
+    "name": "Shalita Chism",
+    "timestamp": 1708984261
+  },
+  {
+    "name": "Adam Herod",
+    "timestamp": 1707503402
+  },
+  {
+    "name": "Stephanie Bragg",
+    "timestamp": 1707247404
+  },
+  {
+    "name": "Rick Hartunian",
+    "timestamp": 1706813590
+  },
+  {
+    "name": "Keller Williams RC",
+    "timestamp": 1706574864
+  },
+]}
 
 export default function Home() {
   const [friends, setFriends] = useState<Array<{
@@ -26,7 +47,7 @@ export default function Home() {
               return friend
 
           })
-          console.log('arr: ', arr)
+          // console.log('arr: ', arr)
 
           setFriends([...friends, ...arr])
       }
